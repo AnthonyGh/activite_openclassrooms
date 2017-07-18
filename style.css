@@ -1,0 +1,149 @@
+@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'learning_curve';
+    src: url('learning_curve_regular_ot_tt.eot');
+    src: url('learning_curve_regular_ot_tt.eot?#iefix') format('embedded-opentype'),
+         url('learning_curve_regular_ot_tt.woff') format('woff'),
+         url('learning_curve_regular_ot_tt.ttf') format('truetype'),
+         url('learning_curve_regular_ot_tt.svg#LearningCurveRegular') format('svg');
+}
+
+body /* Possibilité de mettre 2 images dans le background */
+{
+    background: url("soleil.png") fixed no-repeat top right, url("neige.png") fixed;
+}
+
+h1
+{
+    text-shadow: 2px 2px 4px black;
+}
+
+h2 /* Utilisation de la police qu'on vient de définir sur les titres */
+{
+    font-family: 'learning_curve', Arial, serif;
+    font-size:30px;
+}
+
+
+/* 
+* : sélecteur universel
+Sélectionne toutes les balises sans exception. On l'appelle le sélecteur universel.
+*/
+
+*
+{
+margin-left:50px;
+}
+
+
+/* 
+A + B : une balise qui en suit une autre
+Sélectionne la première balise <p> située après un titre <h3>.
+*/
+
+h3 + p
+{
+margin:auto;
+
+}
+
+
+a:active /* Quand le visiteur clique sur le lien */
+{
+    background-color: #FFCC66;
+}
+
+a:focus /* Quand le visiteur sélectionne le lien */
+{
+    background-color: #FFCC66;
+}
+
+a:visited /* Quand le visiteur a déjà vu la page concernée */
+{
+    color: #AAA; /* Appliquer une couleur grise */
+}
+
+
+/* 
+A[attribut] : une balise qui possède un attribut
+Sélectionne tous les liens <a> qui possèdent un attribut title.
+*/
+
+a[title]
+{
+
+}
+
+
+/* 
+A[attribut*="Valeur"] : une balise, un attribut et une valeur
+l'attribut doit cette fois contenir dans sa valeur le mot « ici » (peu importe sa position).
+Exemple :
+<a href="http://site.com" title="Quelque part par ici">
+*/
+
+a[title*="ici"]
+{
+
+}
+
+.oblique
+{
+    font-style: oblique;
+}
+
+.italique
+{
+    font-style: italic;
+}
+
+.souligne
+{
+    text-decoration: underline;
+}
+.barre
+{
+    text-decoration: line-through;
+}
+.ligne_dessus
+{
+    text-decoration: overline;
+}
+.clignotant
+{
+    text-decoration: blink;
+}
+
+
+
+
+/*
+Arrêter le float, et continuer un texte en dessous.
+*/
+
+
+.imageflottante
+{
+    float: left; height:50px;
+}
+.dessous
+{
+    clear: both;
+}
+
+
+
+/*
+Fonction Flexbox
+*/
+#conteneur
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+#conteneur, div 
+{
+    border:1px solid red;
+}
